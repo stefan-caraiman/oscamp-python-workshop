@@ -5,7 +5,11 @@ from __future__ import print_function
 from math import sqrt
 
 print(sqrt(121))
-
+#string formatting
+fname = "Ann"
+lname = "Marlen"
+print("Hello there %s %s!" % (fname,lname),end="")
+print("Goodbye {1} {0}".format(fname,lname))
 def f():
 	return "Hello world!"
 
