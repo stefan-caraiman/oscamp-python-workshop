@@ -5,12 +5,15 @@ intExample = 42 # declaring an int
 longExample = 2000L # long variable
 floatExample = 3.1415 # float/double variable
 boolExample = True #a bool variable -> evaluted to false
-
+aString = "Anna"
+multiLine = '''Well, would you look at that.
+There are a lot of people.
+Huh?'''
 #Print on console in Python 2.7.x
 print type(longExample)
 #Print on console in Python 3.x
 #from __future__ import print_function
-print("Hello there everyone!")
+print(multiLine)
 #Let's take a further look at conditional operators
 print True and False
 print True or False
