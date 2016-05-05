@@ -30,6 +30,24 @@ print(add_5_to(36))
 
 
 #Classes
+class Test(object):
+    def __init__(self):
+        self.__a = 'var a'
+        self._b = "var b"
+
+t = Test()
+print(t._b)
+print(t._Test__a)
+# you can still access private variables, double underscore is just a namemangle,the variable is still
+# in the form such as : instancename._className__privatevar
+
+class Books:
+	number_of_books = 0
+	def __init__(self,author,title):
+		self.author = author
+		self.title = title
+		self.number_of_books = Books.number_of_books
+		Books.number_of_books += 1
 class Animal:
     # None signifies the lack of a value
     # You can make a variable private by starting it with __
@@ -84,18 +102,3 @@ cat = Animal('Whiskers', 33, 10, 'Meow')
 print(cat.toString())
 print(cat._ex)
 
-- _single_leading_underscore: weak "internal use" indicator.  E.g. "from M
-  import *" does not import objects whose name starts with an underscore.
-
-- single_trailing_underscore_: used by convention to avoid conflicts with
-  Python keyword, e.g.
-
-  Tkinter.Toplevel(master, class_='ClassName')
-
-- __double_leading_underscore: when naming a class attribute, invokes name
-  mangling (inside class FooBar, __boo becomes _FooBar__boo; see below).
-
-- __double_leading_and_trailing_underscore__: "magic" objects or
-  attributes that live in user-controlled namespaces.  E.g. __init__,
-  __import__ or __file__.  Never invent such names; only use them
-  as documented.
